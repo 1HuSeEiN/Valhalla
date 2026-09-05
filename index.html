@@ -1086,47 +1086,70 @@
   </a>
 
   <!-- ================= MENU LIGHTBOX MODAL (23 PAGES VIEWER) ================= -->
-  <div id="lightboxModal" class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-md flex flex-col justify-between p-4 sm:p-6 transition-all duration-300 select-none" onclick="handleLightboxBackdropClick(event)">
+  <div id="lightboxModal" class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-md flex flex-col justify-between p-3 sm:p-5 transition-all duration-300 select-none" onclick="handleLightboxBackdropClick(event)">
     <!-- Lightbox Top Controls -->
-    <div class="flex items-center justify-between z-20">
+    <div class="flex items-center justify-between z-20 px-1 sm:px-4">
       <div class="flex items-center gap-3">
-        <span class="px-3.5 py-1.5 rounded-full gold-gradient-bg text-black font-extrabold text-xs shadow-gold" id="lightboxCounter">
+        <span class="px-3.5 py-1.5 rounded-full gold-gradient-bg text-black font-extrabold text-xs shadow-gold tracking-wide" id="lightboxCounter">
           الصفحة 1 من 23
         </span>
         <span class="text-gray-400 text-xs hidden sm:inline">
-          <i class="fa-solid fa-keyboard ml-1"></i> استخدم الأسهم للتنقل أو اضغط Esc للخروج
+          <i class="fa-solid fa-keyboard ml-1 text-valhalla-gold"></i> الأسهم للتنقل • Esc للخروج • يمكنك أيضاً السحب باللمس
         </span>
       </div>
       <div class="flex items-center gap-2">
-        <a id="lightboxDownloadBtn" href="assets/1.jpg" target="_blank" class="w-10 h-10 rounded-xl bg-valhalla-card hover:bg-valhalla-border text-gray-300 hover:text-white border border-valhalla-border flex items-center justify-center transition" title="عرض الصورة بالحجم الكامل">
+        <a id="lightboxDownloadBtn" href="assets/1.jpg" target="_blank" class="w-10 h-10 rounded-xl bg-valhalla-card hover:bg-valhalla-border text-gray-300 hover:text-valhalla-gold border border-valhalla-border flex items-center justify-center transition shadow-md" title="عرض الصورة بدقة كاملة">
           <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
         </a>
-        <button onclick="closeLightbox()" class="w-10 h-10 rounded-xl bg-valhalla-card hover:bg-red-600/80 text-gray-300 hover:text-white border border-valhalla-border flex items-center justify-center transition" title="إغلاق">
+        <button onclick="closeLightbox()" class="w-10 h-10 rounded-xl bg-valhalla-card hover:bg-red-600/80 text-gray-300 hover:text-white border border-valhalla-border flex items-center justify-center transition shadow-md" title="إغلاق المنيو">
           <i class="fa-solid fa-xmark text-lg"></i>
         </button>
       </div>
     </div>
 
-    <!-- Main Image Display & Navigation Arrows -->
-    <div class="relative flex-1 flex items-center justify-center my-3 overflow-hidden">
-      <!-- Prev Button (Right side in RTL) -->
-      <button onclick="prevLightboxPage()" class="absolute right-2 sm:right-6 z-30 w-12 h-12 rounded-full bg-black/70 hover:bg-valhalla-gold hover:text-black text-white border border-white/20 flex items-center justify-center transition shadow-2xl text-lg backdrop-blur-md" title="الصفحة السابقة">
+    <!-- Main Image Display & Desktop Gutter Navigation Arrows -->
+    <div class="relative flex-1 flex items-center justify-center my-2 overflow-hidden px-2 md:px-20 lg:px-24" id="lightboxImageArea">
+      <!-- Prev Button (Desktop only: placed in empty margins outside the image, never covers text) -->
+      <button onclick="prevLightboxPage()" class="hidden md:flex absolute right-4 lg:right-6 z-30 w-12 h-12 rounded-full bg-valhalla-card/90 hover:bg-valhalla-gold hover:text-black text-white border border-valhalla-gold/40 items-center justify-center transition shadow-gold text-lg backdrop-blur-md hover:scale-110 active:scale-95" title="الصفحة السابقة">
         <i class="fa-solid fa-chevron-right"></i>
       </button>
 
-      <!-- Active Menu Image -->
-      <img id="lightboxImage" src="assets/1.jpg" alt="قائمة طعام فالهالا" class="max-h-[82vh] max-w-[92vw] object-contain rounded-xl shadow-2xl border border-valhalla-gold/30 transition-all duration-200 transform" />
+      <!-- Active Menu Image: clean, unobstructed, 100% visible text -->
+      <img id="lightboxImage" src="assets/1.jpg" alt="قائمة طعام فالهالا" class="max-h-[70vh] sm:max-h-[75vh] md:max-h-[78vh] max-w-full md:max-w-[calc(100vw-200px)] object-contain rounded-xl shadow-2xl border border-valhalla-gold/30 transition-all duration-200 transform select-none" />
 
-      <!-- Next Button (Left side in RTL) -->
-      <button onclick="nextLightboxPage()" class="absolute left-2 sm:left-6 z-30 w-12 h-12 rounded-full bg-black/70 hover:bg-valhalla-gold hover:text-black text-white border border-white/20 flex items-center justify-center transition shadow-2xl text-lg backdrop-blur-md" title="الصفحة التالية">
+      <!-- Next Button (Desktop only: placed in empty margins outside the image, never covers text) -->
+      <button onclick="nextLightboxPage()" class="hidden md:flex absolute left-4 lg:left-6 z-30 w-12 h-12 rounded-full bg-valhalla-card/90 hover:bg-valhalla-gold hover:text-black text-white border border-valhalla-gold/40 items-center justify-center transition shadow-gold text-lg backdrop-blur-md hover:scale-110 active:scale-95" title="الصفحة التالية">
         <i class="fa-solid fa-chevron-left"></i>
       </button>
     </div>
 
-    <!-- Quick Jump Number Bar -->
-    <div class="flex items-center justify-center gap-1.5 z-20 overflow-x-auto py-2 max-w-full px-4 scrollbar-thin">
-      <span class="text-gray-400 text-xs shrink-0 ml-2">الانتقال السريع:</span>
-      <div class="flex items-center gap-1 overflow-x-auto" id="lightboxQuickNav"></div>
+    <!-- Bottom Controls Dock (Prev / Next buttons & Quick Jump strip) -->
+    <div class="z-20 flex flex-col gap-2 pt-2 border-t border-valhalla-border/60 max-w-4xl mx-auto w-full px-2 sm:px-4">
+      <!-- Primary Nav Buttons (Thumb-friendly on mobile & clean on desktop) -->
+      <div class="flex items-center justify-between gap-2 sm:gap-3">
+        <!-- Prev Button -->
+        <button onclick="prevLightboxPage()" class="flex-1 sm:flex-none flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-valhalla-card hover:bg-valhalla-gold hover:text-black text-gray-200 hover:border-valhalla-gold border border-valhalla-border text-xs sm:text-sm font-bold transition shadow-lg active:scale-95 whitespace-nowrap group">
+          <i class="fa-solid fa-chevron-right text-valhalla-gold group-hover:text-black transition"></i>
+          <span>الصفحة السابقة</span>
+        </button>
+
+        <!-- Current Page Indicator (Mobile) -->
+        <div class="text-center px-3 py-1.5 rounded-lg bg-valhalla-surface border border-valhalla-border/80 sm:hidden min-w-[54px] shrink-0">
+          <span id="lightboxBottomCounter" class="text-xs font-black text-valhalla-gold">1 / 23</span>
+        </div>
+
+        <!-- Next Button -->
+        <button onclick="nextLightboxPage()" class="flex-1 sm:flex-none flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-valhalla-card hover:bg-valhalla-gold hover:text-black text-gray-200 hover:border-valhalla-gold border border-valhalla-border text-xs sm:text-sm font-bold transition shadow-lg active:scale-95 whitespace-nowrap group">
+          <span>الصفحة التالية</span>
+          <i class="fa-solid fa-chevron-left text-valhalla-gold group-hover:text-black transition"></i>
+        </button>
+      </div>
+
+      <!-- Quick Jump Number Bar -->
+      <div class="flex items-center justify-center gap-1.5 overflow-x-auto py-1 max-w-full scrollbar-thin">
+        <span class="text-gray-400 text-xs shrink-0 ml-1 hidden sm:inline font-medium">الانتقال السريع:</span>
+        <div class="flex items-center gap-1 overflow-x-auto py-0.5" id="lightboxQuickNav"></div>
+      </div>
     </div>
   </div>
 
@@ -1188,12 +1211,14 @@
     function updateLightbox() {
       const img = document.getElementById('lightboxImage');
       const counter = document.getElementById('lightboxCounter');
+      const bottomCounter = document.getElementById('lightboxBottomCounter');
       const dlBtn = document.getElementById('lightboxDownloadBtn');
       const src = `assets/${currentLightboxIndex}.jpg`;
 
       img.src = src;
       img.alt = `منيو فالهالا - صفحة ${currentLightboxIndex}`;
-      counter.textContent = `الصفحة ${currentLightboxIndex} من ${totalMenuPages}`;
+      if (counter) counter.textContent = `الصفحة ${currentLightboxIndex} من ${totalMenuPages}`;
+      if (bottomCounter) bottomCounter.textContent = `${currentLightboxIndex} / ${totalMenuPages}`;
       if (dlBtn) dlBtn.href = src;
 
       // Update quick nav buttons
@@ -1242,6 +1267,37 @@
       if (e.key === 'ArrowLeft') nextLightboxPage();
       if (e.key === 'ArrowRight') prevLightboxPage();
     });
+
+    // Touch Swipe Gestures for Mobile
+    (function initLightboxSwipe() {
+      const modal = document.getElementById('lightboxModal');
+      if (!modal) return;
+      let touchStartX = 0;
+      let touchStartY = 0;
+
+      modal.addEventListener('touchstart', function (e) {
+        if (e.touches && e.touches.length === 1) {
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+        }
+      }, { passive: true });
+
+      modal.addEventListener('touchend', function (e) {
+        if (e.changedTouches && e.changedTouches.length === 1) {
+          const deltaX = e.changedTouches[0].clientX - touchStartX;
+          const deltaY = e.changedTouches[0].clientY - touchStartY;
+          // Only trigger horizontal swipe if deltaX is dominant over deltaY
+          if (Math.abs(deltaX) > 40 && Math.abs(deltaX) > Math.abs(deltaY) * 1.5) {
+            // In RTL: dragging left (deltaX < 0) means going next, dragging right (deltaX > 0) means going prev
+            if (deltaX < 0) {
+              nextLightboxPage();
+            } else {
+              prevLightboxPage();
+            }
+          }
+        }
+      }, { passive: true });
+    })();
   </script>
 </body>
 </html>
