@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مطعم وكافيه فالهالا | Valhalla Restaurant & Café - بغداد</title>
+  <meta name="description" content="مطعم وكافيه فالهالا في بغداد - المنصور. تجربة طعام استثنائية تجمع بين الفخامة والنكهات العالمية والشرقية. مفتوح 24 ساعة يومياً." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
+  <link rel="apple-touch-icon" href="assets/logo.jpg" />
+
+  <!-- Google Fonts: Cairo & Cinzel -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Cinzel:wght@600;700;900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            valhalla: {
+              gold: '#D4AF37',
+              goldHover: '#B89726',
+              goldLight: '#F5E7A3',
+              dark: '#0B0F14',
+              surface: '#121820',
+              card: '#18212C',
+              border: '#2A3644',
+              accent: '#C59A27',
+            }
+          },
+          fontFamily: {
+            cairo: ['Cairo', 'sans-serif'],
+            cinzel: ['Cinzel', 'serif'],
+          },
+          boxShadow: {
+            gold: '0 4px 25px -2px rgba(212, 175, 55, 0.25)',
+            goldGlow: '0 0 35px rgba(212, 175, 55, 0.4)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #0B0F14;
+      color: #E2E8F0;
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #FFF1B0 0%, #D4AF37 50%, #9E7D1A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-gradient-bg {
+      background: linear-gradient(135deg, #ECC853 0%, #D4AF37 50%, #AA841D 100%);
+    }
+    .glass-card {
+      background: rgba(24, 33, 44, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(212, 175, 55, 0.15);
+    }
+    .glass-card:hover {
+      border-color: rgba(212, 175, 55, 0.4);
+    }
+    .subtle-grid {
+      background-image: radial-gradient(rgba(212, 175, 55, 0.08) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0B0F14; }
+    ::-webkit-scrollbar-thumb { background: #2A3644; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #D4AF37; }
+  </style>
+</head>
+<body class="antialiased selection:bg-valhalla-gold selection:text-black subtle-grid">
+
+  <!-- ================= TOP NOTIFICATION BAR ================= -->
+  <aside aria-label="شريط المعلومات السريع" class="bg-valhalla-dark/95 border-b border-valhalla-border/60 text-xs py-2 px-4 text-gray-300 relative z-50">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-4">
+        <span class="inline-flex items-center gap-1.5 text-emerald-400 font-medium">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          مفتوح الآن على مدار 24 ساعة
+        </span>
+        <span class="hidden md:inline-block text-gray-500">•</span>
+        <span class="hidden md:inline-flex items-center gap-1 text-gray-300">
+          <i class="fa-solid fa-location-dot text-valhalla-gold text-xs"></i>
+          العراق، بغداد - المنصور (شارع 14 رمضان / الداودي)
+        </span>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <a href="tel:07744007788" class="hover:text-valhalla-gold transition flex items-center gap-1">
+          <i class="fa-solid fa-phone text-valhalla-gold text-xs"></i>
+          <span>07744007788</span>
+        </a>
+        <span class="text-gray-600">|</span>
+        <a href="https://www.instagram.com/valhalla.iq/" target="_blank" rel="noopener noreferrer" class="text-pink-400 hover:text-pink-300 transition flex items-center gap-1">
+          <i class="fa-brands fa-instagram text-xs"></i>
+          <span>valhalla.iq</span>
+        </a>
+        <span class="text-gray-600">|</span>
+        <a href="https://maps.app.goo.gl/iEUcxWEHV9ViHvrx8" target="_blank" rel="noopener noreferrer" class="text-valhalla-gold hover:underline flex items-center gap-1">
+          <span>الخريطة</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= MAIN NAVIGATION ================= -->
+  <header class="sticky top-0 z-40 bg-valhalla-dark/85 backdrop-blur-md border-b border-valhalla-border/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl overflow-hidden border-2 border-valhalla-gold/50 shadow-gold group-hover:scale-105 group-hover:border-valhalla-gold transition-all duration-300 bg-valhalla-card flex items-center justify-center p-0.5">
+            <img src="assets/logo.jpg" alt="لوقو مطعم وكافيه فالهالا" class="w-full h-full object-cover rounded-lg" />
+          </div>
+          <div>
+            <span class="block font-cinzel text-xl sm:text-2xl font-black tracking-widest text-white leading-none">
+              VALHALLA
+            </span>
+            <span class="block text-xs font-semibold text-gray-300 tracking-wider mt-1">
+              مطعم وكافيه <span class="gold-gradient-text font-bold">فالهالا</span>
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-gray-300">
+          <a href="#hero" class="hover:text-valhalla-gold transition">الرئيسية</a>
+          <a href="#about" class="hover:text-valhalla-gold transition">عن فالهالا</a>
+          <a href="#menu" class="hover:text-valhalla-gold transition">قائمة الطعام</a>
+          <a href="#features" class="hover:text-valhalla-gold transition">المميزات</a>
+          <a href="#reviews" class="hover:text-valhalla-gold transition">آراء الزوار</a>
+          <a href="#contact" class="hover:text-valhalla-gold transition">الموقع والتواصل</a>
+        </nav>
+
+        <!-- Header Actions (No booking button - presentation & contact only) -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="https://www.instagram.com/valhalla.iq/" target="_blank" rel="noopener noreferrer" 
+             class="px-3.5 py-2 rounded-lg bg-gradient-to-r from-pink-600/20 to-purple-600/20 hover:from-pink-600/30 hover:to-purple-600/30 border border-pink-500/40 text-pink-300 transition text-sm font-semibold flex items-center gap-2">
+            <i class="fa-brands fa-instagram text-base text-pink-400"></i>
+            <span>إنستغرام</span>
+          </a>
+          <a href="https://wa.me/9647744007788" target="_blank" rel="noopener noreferrer" 
+             class="px-4 py-2 rounded-lg border border-emerald-500/40 hover:border-emerald-400 text-emerald-400 hover:bg-emerald-500/10 transition text-sm font-semibold flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>واتساب</span>
+          </a>
+          <a href="tel:07744007788" 
+             class="px-4 py-2 rounded-lg gold-gradient-bg text-black font-bold text-sm shadow-gold hover:opacity-95 transition flex items-center gap-1.5">
+            <i class="fa-solid fa-phone text-xs"></i>
+            <span>اتصل الآن</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="lg:hidden flex items-center gap-2">
+          <button onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-valhalla-card text-gray-300 hover:text-valhalla-gold focus:outline-none border border-valhalla-border">
+            <i id="mobileMenuIcon" class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden border-b border-valhalla-border bg-valhalla-surface/95 backdrop-blur-xl px-4 pt-4 pb-6 space-y-3">
+      <a href="#hero" onclick="toggleMobileMenu()" class="block py-2 text-gray-200 hover:text-valhalla-gold font-medium border-b border-valhalla-border/40">الرئيسية</a>
+      <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-gray-200 hover:text-valhalla-gold font-medium border-b border-valhalla-border/40">عن المطعم</a>
+      <a href="#menu" onclick="toggleMobileMenu()" class="block py-2 text-gray-200 hover:text-valhalla-gold font-medium border-b border-valhalla-border/40">قائمة الطعام</a>
+      <a href="#features" onclick="toggleMobileMenu()" class="block py-2 text-gray-200 hover:text-valhalla-gold font-medium border-b border-valhalla-border/40">المميزات</a>
+      <a href="#reviews" onclick="toggleMobileMenu()" class="block py-2 text-gray-200 hover:text-valhalla-gold font-medium border-b border-valhalla-border/40">آراء الزوار</a>
+      <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-gray-200 hover:text-valhalla-gold font-medium">الموقع والاتصال</a>
+      <div class="pt-3 flex flex-col gap-2">
+        <a href="https://www.instagram.com/valhalla.iq/" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 bg-gradient-to-r from-pink-600 to-purple-600 text-white font-bold rounded-lg text-center flex items-center justify-center gap-2">
+          <i class="fa-brands fa-instagram"></i> متابعة حساب إنستغرام
+        </a>
+        <a href="tel:07744007788" class="w-full py-2.5 border border-valhalla-gold/40 text-valhalla-gold font-semibold rounded-lg text-center flex items-center justify-center gap-2">
+          <i class="fa-solid fa-phone"></i> اتصال مباشر بالمطعم
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section id="hero" class="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-16 lg:py-24">
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=2000&q=80" 
+           alt="أجواء مطعم وكافيه فالهالا" 
+           class="w-full h-full object-cover object-center scale-105 filter brightness-[0.25] contrast-125" />
+      <div class="absolute inset-0 bg-gradient-to-t from-valhalla-dark via-valhalla-dark/60 to-transparent"></div>
+    </div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
+      
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-valhalla-gold/10 border border-valhalla-gold/30 text-valhalla-goldLight text-xs sm:text-sm font-semibold mb-6 animate-pulse">
+        <i class="fa-solid fa-crown text-valhalla-gold"></i>
+        <span>الوجهة الأولى لعشاق الفخامة والذوق الرفيع في بغداد</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight mb-6">
+        وليمة تليق بالأساطير في (مطعم وكافيه) <span class="gold-gradient-text">فالهالا</span>
+      </h1>
+
+      <p class="max-w-3xl mx-auto text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed mb-8">
+        عيش تجربة طهي فريدة تمتزج فيها أصالة النكهات الشرقية مع روعة الأطباق العالمية والستيك الفاخر في أجواء ملوكية استثنائية، مفتوح لخدمتكم 24 ساعة يومياً في قلب المنصور.
+      </p>
+
+      <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 text-sm text-gray-300 mb-10">
+        <a href="https://maps.app.goo.gl/iEUcxWEHV9ViHvrx8" target="_blank" rel="noopener noreferrer" 
+           class="flex items-center gap-2 bg-valhalla-card/80 border border-valhalla-border px-4 py-2 rounded-full hover:border-valhalla-gold transition">
+          <div class="flex text-amber-400 text-xs">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <span class="font-bold text-white">4.8</span>
+          <span class="text-gray-400 text-xs">(تقييمات خرائط Google)</span>
+        </a>
+
+        <div class="flex items-center gap-2 bg-valhalla-card/80 border border-valhalla-border px-4 py-2 rounded-full">
+          <i class="fa-solid fa-clock text-valhalla-gold"></i>
+          <span>خدمة 24/7 متواصلة</span>
+        </div>
+
+        <div class="flex items-center gap-2 bg-valhalla-card/80 border border-valhalla-border px-4 py-2 rounded-full">
+          <i class="fa-solid fa-location-dot text-valhalla-gold"></i>
+          <span>بغداد - المنصور</span>
+        </div>
+      </div>
+
+      <!-- Hero Actions (Pure showcase & navigation) -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#menu" class="w-full sm:w-auto px-8 py-4 gold-gradient-bg text-black font-extrabold rounded-xl shadow-gold hover:shadow-goldGlow hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3 text-base">
+          <i class="fa-solid fa-book-open"></i>
+          <span>استعراض قائمة الطعام</span>
+        </a>
+
+        <a href="https://www.instagram.com/valhalla.iq/" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-7 py-4 rounded-xl border-2 border-pink-500/50 hover:border-pink-400 text-white hover:bg-pink-500/10 font-bold transition duration-300 flex items-center justify-center gap-3 text-base">
+          <i class="fa-brands fa-instagram text-pink-400 text-lg"></i>
+          <span>حسابنا على Instagram</span>
+        </a>
+
+        <a href="https://maps.app.goo.gl/iEUcxWEHV9ViHvrx8" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-4 rounded-xl bg-valhalla-card hover:bg-valhalla-border text-gray-200 border border-valhalla-border transition duration-300 flex items-center justify-center gap-2 text-base">
+          <i class="fa-brands fa-google text-valhalla-gold"></i>
+          <span>موقعنا في خرائط Google</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= ABOUT SECTION ================= -->
+  <section id="about" class="py-20 bg-valhalla-surface border-y border-valhalla-border/40 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 text-valhalla-gold text-sm font-bold uppercase tracking-wider">
+            <span class="w-6 h-[2px] bg-valhalla-gold"></span>
+            قصة فالهالا
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+            حين تصبح الوجبة حكاية من الفخامة والهيبة في <span class="gold-gradient-text">فالهالا</span>
+          </h2>
+
+          <p class="text-gray-300 leading-relaxed text-base sm:text-lg">
+            مستوحى من عظمة قاعات الأساطير "فالهالا"، صممنا مطعم وكافيه فالهالا في أرقى مناطق بغداد (المنصور - الداودي) ليكون ملاذاً للباحثين عن أرقى التجارب. نجمع بين سخاء الضيافة العراقية والابتكار العالمي في فنون الطهي.
+          </p>
+
+          <p class="text-gray-400 leading-relaxed text-sm sm:text-base">
+            سواء كنت تبحث عن إفطار صباحي فاخر، أو غداء عمل راقٍ، أو عشاء استثنائي يضم أشهى أطباق اللحوم والستيك المدخن والمشاوي، أو جلسة كافيه هادئة لتذوق القهوة المختصة والحلويات الفاخرة، فإن أبوابنا مفتوحة لاستقبالكم على مدار الساعة دون انقطاع.
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
+            <div class="p-4 rounded-xl bg-valhalla-card border border-valhalla-border">
+              <i class="fa-solid fa-fire-burner text-valhalla-gold text-2xl mb-2 block"></i>
+              <h4 class="text-white font-bold text-sm mb-1">لحوم طازجة 100%</h4>
+              <p class="text-gray-400 text-xs">أجود القطعيات يومياً بعناية فائقة</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-valhalla-card border border-valhalla-border">
+              <i class="fa-solid fa-infinity text-valhalla-gold text-2xl mb-2 block"></i>
+              <h4 class="text-white font-bold text-sm mb-1">خدمة 24 ساعة</h4>
+              <p class="text-gray-400 text-xs">جاهزون لخدمتكم ليلاً ونهاراً</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-valhalla-card border border-valhalla-border col-span-2 sm:col-span-1">
+              <i class="fa-solid fa-users text-valhalla-gold text-2xl mb-2 block"></i>
+              <h4 class="text-white font-bold text-sm mb-1">أجواء عائلية وخاصة</h4>
+              <p class="text-gray-400 text-xs">جلسات VIP هادئة ومريحة</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 relative">
+          <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-2 border-valhalla-gold/20">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1000&q=80" 
+                 alt="جلسات مطعم وكافيه فالهالا" 
+                 class="w-full h-96 object-cover hover:scale-105 transition-transform duration-500" />
+            
+            <div class="absolute bottom-4 right-4 left-4 p-4 rounded-xl bg-valhalla-dark/90 backdrop-blur-md border border-valhalla-gold/30">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h4 class="text-white font-bold text-sm">أجواء فخمة ومريحة</h4>
+                  <p class="text-gray-400 text-xs">مخصصة للعوائل والشباب والمناسبات</p>
+                </div>
+                <span class="w-10 h-10 rounded-lg gold-gradient-bg flex items-center justify-center text-black font-bold">
+                  <i class="fa-solid fa-gem"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= MENU HIGHLIGHT SHOWCASE (23 PAGES) ================= -->
+  <section id="menu" class="py-20 relative bg-gradient-to-b from-valhalla-dark via-valhalla-surface to-valhalla-dark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 text-pink-300 text-xs font-bold mb-3">
+          <i class="fa-brands fa-instagram text-pink-400 text-sm"></i>
+          <span>حسابنا الرسمي: @valhalla.iq</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black text-white">منيو إنستغرام (هايلات Menu) لمطعم <span class="gold-gradient-text">فالهالا</span></h2>
+        <p class="text-gray-400 text-sm sm:text-base mt-2">
+          يمكنك تصفح صور صفحات المنيو الرسمية مباشرة كما تم نشرها في هايلات حساب المطعم.
+        </p>
+      </div>
+
+      <!-- Instagram Highlight Profile Card -->
+      <div class="rounded-2xl glass-card p-6 sm:p-8 mb-10 border border-pink-500/30">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div class="flex items-center gap-4 text-center sm:text-right">
+            <!-- Instagram Story Circle Avatar -->
+            <a href="https://www.instagram.com/valhalla.iq/" target="_blank" rel="noopener noreferrer" 
+               class="relative p-1 rounded-full bg-gradient-to-tr from-amber-400 via-pink-500 to-purple-600 shrink-0 hover:scale-105 transition duration-300" title="زيارة حساب إنستغرام">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-valhalla-dark overflow-hidden flex items-center justify-center p-0.5 border border-valhalla-gold/30">
+                <img src="assets/logo.jpg" 
+                     alt="لوقو فالهالا الرسمي" 
+                     class="w-full h-full object-cover rounded-full" />
+              </div>
+              <span class="absolute bottom-0 right-0 w-6 h-6 bg-pink-600 rounded-full flex items-center justify-center text-white text-[10px] border-2 border-valhalla-dark">
+                <i class="fa-solid fa-utensils"></i>
+              </span>
+            </a>
+            <div>
+              <div class="flex items-center justify-center sm:justify-start gap-2">
+                <h3 class="text-xl font-bold text-white">valhalla.iq</h3>
+                <i class="fa-solid fa-circle-check text-blue-400 text-sm"></i>
+              </div>
+              <p class="text-gray-300 text-xs sm:text-sm mt-0.5">Valhalla Restaurant & Café • مطعم وكافيه فالهالا</p>
+              <div class="flex items-center justify-center sm:justify-start gap-3 mt-2 text-xs text-gray-400">
+                <span class="text-valhalla-gold font-semibold"><i class="fa-solid fa-images ml-1"></i> هايلات: Menu</span>
+                <span>•</span>
+                <span>بغداد - المنصور</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://www.instagram.com/valhalla.iq/" target="_blank" rel="noopener noreferrer" 
+             class="px-6 py-3 rounded-xl bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white font-bold text-sm shadow-lg hover:shadow-pink-500/25 transition duration-300 flex items-center gap-2 shrink-0">
+            <i class="fa-brands fa-instagram text-lg"></i>
+            <span>فتح الهايلات على إنستغرام</span>
+            <i class="fa-solid fa-arrow-left text-xs"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Menu Highlight Images Gallery (All 23 Pages from assets/) -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4" id="menuGallery">
+        
+        <!-- Page 1 -->
+        <div class="rounded-xl overflow-hidden glass-card group relative border border-valhalla-border hover:border-valhalla-gold transition duration-300 cursor-pointer shadow-md hover:shadow-gold" onclick="openLightbox(1)">
+          <div class="aspect-[5/7] relative bg-slate-900 overflow-hidden flex items-center justify-center">
+            <img src="assets/1.jpg" loading="lazy" alt="منيو فالهالا - صفحة 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 opacity-80 group-hover:opacity-100 transition"></div>
+            <span class="absolute top-2 right-2 px-2.5 py-0.5 rounded-md bg-black/75 backdrop-blur-md text-valhalla-gold font-bold text-xs border border-valhalla-gold/30">صفحة 1</span>
+            <div class="absolute bottom-2 inset-x-2 text-center opacity-0 group-hover:opacity-100 transition duration-300">
+              <span class="inline-flex items-center gap-1 px-3 py-1 rounded-lg gold-gradient-bg text-black font-bold text-xs shadow-gold"><i class="fa-solid fa-magnifying-glass-plus text-[10px]"></i> تكبير</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 2 -->
+        <div class="rounded-xl overflow-hidden glass-card group relative border border-valhalla-border hover:border-valhalla-gold transition duration-300 cursor-pointer shadow-md hover:shadow-gold" onclick="openLightbox(2)">
+          <div class="aspect-[5/7] relative bg-slate-900 overflow-hidden flex items-center justify-center">
+            <img src="assets/2.jpg" loading="lazy" alt="منيو فالهالا - صفحة 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 opacity-80 group-hover:opacity-100 transition"></div>
+            <span class="absolute top-2 right-2 px-2.5 py-0.5 rounded-md bg-black/75 backdrop-blur-md text-valhalla-gold font-bold text-xs border border-valhalla-gold/30">صفحة 2</span>
+            <div class="absolute bottom-2 inset-x-2 text-center opacity-0 group-hover:opacity-100 transition duration-300">
+              <span class="inline-flex items-center gap-1 px-3 py-1 rounded-lg gold-gradient-bg text-black font-bold text-xs shadow-gold"><i class="fa-solid fa-magnifying-glass-plus text-[10px]"></i> تكبير</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 3 -->
+        <div class="rounded-xl overflow-hidden glass-card group relative border border-valhalla-border hover:border-valhalla-gold transition duration-300 cursor-pointer shadow-md hover:shadow-gold" onclick="openLightbox(3)">
+          <div class="aspect-[5/7] relative bg-slate-900 overflow-hidden flex items-center justify-center">
+            <img src="assets/3.jpg" loading="lazy" alt="منيو فالهالا - صفحة 3" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 opacity-80 group-hover:opacity-100 transition"></div>
+            <span class="absolute top-2 right-2 px-2.5 py-0.5 rounded-md bg-black/75 backdrop-blur-md text-valhalla-gold font-bold text-xs border border-valhalla-gold/30">صفحة 3</span>
+            <div class="absolute bottom-2 inset-x-2 text-center opacity-0 group-hover:opacity-100 transition duration-300">
+              <span class="inline-flex items-center gap-1 px-3 py-1 rounded-lg gold-gradient-bg text-black font-bold text-xs shadow-gold"><i class="fa-solid fa-magnifying-glass-plus text-[10px]"></i> تكبير</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 4 -->
+        <div class="rounded-xl overflow-hidden glass-card group relative border border-valhalla-border hover:border-valhalla-gold transition duration-300 cursor-pointer shadow-md hover:shadow-gold" onclick="openLightbox(4)">
+          <div class="aspect-[5/7] relative bg-slate-900 overflow-hidden flex items-center justify-center">
+            <img src="assets/4.jpg" loading="lazy" alt="منيو فالهالا - صفحة 4" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 opacity-80 group-hover:opacity-100 transition"></div>
+            <span class="absolute top-2 right-2 px-2.5 py-0.5 rounded-md bg-black/75 backdrop-blur-md text-valhalla-gold font-bold text-xs border border-valhalla-gold/30">صفحة 4</span>
+            <div class="absolute bottom-2 inset-x-2 text-center opacity-0 group-hover:opacity-100 transition duration-300">
+              <span class="inline-flex items-center gap-1 px-3 py-1 rounded-lg gold-gradient-bg text-black font-bold text-xs shadow-gold"><i class="fa-solid fa-magnifying-glass-plus text-[10px]"></i> تكبير</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 5 -->
+        <div class="rounded-xl overflow-hidden glass-card group relative border border-valhalla-border hover:border-valhalla-gold transition duration-300 cursor-pointer shadow-md hover:shadow-gold" onclick="openLightbox(5)">
+          <div class="aspect-[5/7] relative bg-slate-900 overflow-hidden flex items-center justify-center">
+            <img src="assets/5.jpg" loading="lazy" alt="منيو فالهالا - صفحة 5" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 opacity-80 group-hover:opacity-100 transition"></div>
+            <span class="absolute top-2 right-2 px-2.5 py-0.5 rounded-md bg-black/75 backdrop-blur-md text-valhalla-gold font-bold text-xs border border-valhalla-gold/30">صفحة 5</span>
+            <div class="absolute bottom-2 inset-x-2 text-center opacity-0 group-hover:opacity-100 transition duration-300">
+              <span class="inline-flex items-center gap-1 px-3 py-1 rounded-lg gold-gradient-bg text-black font-bold text-xs shadow-gold"><i class="fa-solid fa-magnifying-glass-plus text-[10px]"></i> تكبير</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 6 -->
+        <div class="rounded-xl overflow-hidden glass-card group relative border border-valhalla-border hover:border-valhalla-gold transition duration-300 cursor-pointer shadow-md hover:shadow-gold" onclick="openLightbox(6)">
+          <div class="aspect-[5/7] relative bg-slate-900 overflow-hidden flex items-center justify-center">
+            <img src="assets/6.jpg" loading="lazy" alt="منيو فالهالا - صفحة 6" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 opacity-80 group-hover:opacity-100 transition"></div>
+            <span class="absolute top-2 right-2 px-2.5 py-0.5 rounded-md bg-black/75 backdrop-blur-md text-valhalla-gold font-bold text-xs border border-valhalla-gold/30">صفحة 6</span>
+            <div class="absolute bottom-2 inset-x-2 text-center opacity-0 group-hover:opacity-100 transition duration-300">
+              <span class="inline-flex items-center gap-1 px-3 py-1 rounded-lg gold-gradient-bg text-black font-bold text-xs shadow-gold"><i class="fa-solid fa-magnifying-glass-plus text-[10px]"></i> تكبير</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 7 -->
+        <div class="rounded-xl overflow-hidden glass-card group relative border border-valhalla-border hover:border-valhalla-gold transition duration-300 cursor-pointer shadow-md hover:shadow-gold" onclick="openLightbox(7)">
+          <div class="aspect-[5/7] relative bg-slate-900 overflow-hidden flex items-center justify-center">
+            <img src="assets/7.jpg" loading="lazy" alt="منيو فالهالا - صفحة 7" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 opacity-80 group-hover:opacity-100 transition"></div>
+            <span class="absolute top-2 right-2 px-2.5 py-0.5 rounded-md bg-black/75 backdrop-blur-md text-valhalla-gold font-bold text-xs border border-valhalla-gold/30">صفحة 7</span>
+            <div class="absolute bottom-2 inset-x-2 text-center opacity-0 group-hover:opacity-100 transition duration-300">
+              <span class="inline-flex items-center gap-1 px-3 py-1 rounded-lg gold-gradient-bg text-black font-bold text-xs shadow-gold"><i class="fa-solid fa-magnifying-glass-plus text-[10px]"></i> تكبير</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 8 -->
+        <div class="rounded-xl overflow-hidden glass-card group relative border border-valhalla-border hover:border-valhalla-gold transition duration-300 cursor-pointer shadow-md hover:shadow-gold" onclick="openLightbox(8)">
+          <div class="aspect-[5/7] relative bg-slate-900 overflow-hidden flex items-center justify-center">
+            <img src="assets/8.jpg" loading="lazy" alt="منيو فالهالا - صفحة 8" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 opacity-80 group-hover:opacity-100 transition"></div>
+            <span class="absolute top-2 right-2 px-2.5 py-0.5 rounded-md bg-black/75 backdrop-blur-md text-valhalla-gold font-bold text-xs border border-valhalla-gold/30">صفحة 8</span>
+            <div class="absolute bottom-2 inset-x-2 text-center opacity-0 group-hover:opacity-100 transition duration-300">
+              <span class="inline-flex items-center gap-1 px-3 py-1 rounded-lg gold-gradient-bg text-black font-bold text-xs shadow-gold"><i class="fa-solid fa-magnifying-glass-plus text-[10px]"></i> تكبير</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 9 -->
+        <div class="rounded-xl overflow-hidden glass-card group relative border border-valhalla-border hover:border-valhalla-gold transition duration-300 cursor-pointer shadow-md hover:shadow-gold" onclick="openLightbox(9)">
+          <div class="aspect-[5/7] relative bg-slate-900 overflow-hidden flex items-center justify-center">
+            <img src="assets/9.jpg" loading="lazy" alt="منيو فالهالا - صفحة 9" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 opacity-80 group-hover:opacity-100 transition"></div>
+            <span class="absolute top-2 right-2 px-2.5 py-0.5 rounded-md bg-black/75 backdrop-blur-md text-valhalla-gold font-bold text-xs border border-valhalla-gold/30">صفحة 9</span>
+            <div class="absolute bottom-2 inset-x-2 text-center opacity-0 group-hover:opacity-100 transition duration-300">
+              <span class="inline-flex items-center gap-1 px-3 py-1 rounded-lg gold-gradient-bg text-black font-bold text-xs shadow-gold"><i class="fa-solid fa-magnifying-glass-plus text-[10px]"></i> تكبير</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 10 -->
+        <div class="rounded-xl overflow-hidden glass-card group relative border border-valhalla-border hover:border-valhalla-gold transition duration-300 cursor-pointer shadow-md hover:shadow-gold" onclick="openLightbox(10)">
+          <div class="aspect-[5/7] relative bg-slate-900 overflow-hidden flex items-center justify-center">
+            <img src="assets/10.jpg" loading="lazy" alt="منيو فالهالا - صفحة 10" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 opacity-80 group-hover:opacity-100 transition"></div>
+            <span class="absolute top-2 right-2 px-2.5 py-0.5 rounded-md bg-black/75 backdrop-blur-md text-valhalla-gold font-bold text-xs border border-valhalla-gold/30">صفحة 10</span>
+            <div class="absolute bottom-2 inset-x-2 text-center opacity-0 group-hover:opacity-100 transition duration-300">
+              <span class="inline-flex items-center gap-1 px-3 py-1 rounded-lg gold-gradient-bg text-black font-bold text-xs shadow-gold"><i class="fa-solid fa-magnifying-glass-plus text-[10px]"></i> تكبير</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 11 -->
+        <div class="rounded-xl overflow-hidden glass-card group relative border border-valhalla-border hover:border-valhalla-gold transition duration-300 cursor-pointer shadow-md hover:shadow-gold" onclick="openLightbox(11)">
+          <div class="aspect-[5/7] relative bg-slate-900 overflow-hidden flex items-center justify-center">
+            <img src="assets/11.jpg" loading="lazy" alt="منيو فالهالا - صفحة 11" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 opacity-80 group-hover:opacity-100 transition"></div>
+            <span class="absolute top-2 right-2 px-2.5 py-0.5 rounded-md bg-black/75 backdrop-blur-md text-valhalla-gold font-bold text-xs border border-valhalla-gold/30">صفحة 11</span>
+            <div class="absolute bottom-2 inset-x-2 text-center opacity-0 group-hover:opacity-100 transition duration-300">
+              <span class="inline-flex items-center gap-1 px-3 py-1 rounded-lg gold-gradient-bg text-black font-bold text-xs shadow-gold"><i class="fa-solid fa-magnifying-glass-plus text-[10px]"></i> تكبير</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 12 -->
+        <div class="rounded-xl overflow-hidden glass-card group relative border border-valhalla-border hover:border-valhalla-gold transition duration-300 cursor-pointer shadow-md hover:shadow-gold" onclick="openLightbox(12)">
+          <div class="aspect-[5/7] relative bg-slate-900 overflow-hidden flex items-center justify-center">
+            <img src="assets/12.jpg" loading="lazy" alt="منيو فالهالا - صفحة 12" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 opacity-80 group-hover:opacity-100 transition"></div>
+            <span class="absolute top-2 right-2 px-2.5 py-0.5 rounded-md bg-black/75 backdrop-blur-md text-valhalla-gold font-bold text-xs border border-valhalla-gold/30">صفحة 12</span>
+            <div class="absolute bottom-2 inset-x-2 text-center opacity-0 group-hover:opacity-100 transition duration-300">
+              <span class="inline-flex items-center gap-1 px-3 py-1 rounded-lg gold-gradient-bg text-black font-bold text-xs shadow-gold"><i class="fa-solid fa-magnifying-glass-plus text-[10px]"></i> تكبير</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 13 -->
+        <div class="rounded-xl overflow-hidden glass-card group relative border border-valhalla-border hover:border-valhalla-gold transition duration-300 cursor-pointer shadow-md hover:shadow-gold" onclick="openLightbox(13)">
+          <div class="aspect-[5/7] relative bg-slate-900 overflow-hidden flex items-center justify-center">
+            <img src="assets/13.jpg" loading="lazy" alt="منيو فالهالا - صفحة 13" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 opacity-80 group-hover:opacity-100 transition"></div>
+            <span class="absolute top-2 right-2 px-2.5 py-0.5 rounded-md bg-black/75 backdrop-blur-md text-valhalla-gold font-bold text-xs border border-valhalla-gold/30">صفحة 13</span>
+            <div class="absolute bottom-2 inset-x-2 text-center opacity-0 group-hover:opacity-100 transition duration-300">
+              <span class="inline-flex items-center gap-1 px-3 py-1 rounded-lg gold-gradient-bg text-black font-bold text-xs shadow-gold"><i class="fa-solid fa-magnifying-glass-plus text-[10px]"></i> تكبير</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 14 -->
+        <div class="rounded-xl overflow-hidden glass-card group relative border border-valhalla-border hover:border-valhalla-gold transition duration-300 cursor-pointer shadow-md hover:shadow-gold" onclick="openLightbox(14)">
+          <div class="aspect-[5/7] relative bg-slate-900 overflow-hidden flex items-center justify-center">
+            <img src="assets/14.jpg" loading="lazy" alt="منيو فالهالا - صفحة 14" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 opacity-80 group-hover:opacity-100 transition"></div>
+            <span class="absolute top-2 right-2 px-2.5 py-0.5 rounded-md bg-black/75 backdrop-blur-md text-valhalla-gold font-bold text-xs border border-valhalla-gold/30">صفحة 14</span>
+            <div class="absolute bottom-2 inset-x-2 text-center opacity-0 group-hover:opacity-100 transition duration-300">
+              <span class="inline-flex items-center gap-1 px-3 py-1 rounded-lg gold-gradient-bg text-black font-bold text-xs shadow-gold"><i class="fa-solid fa-magnifying-glass-plus text-[10px]"></i> تكبير</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 15 -->
+        <div class="rounded-xl overflow-hidden glass-card group relative border border-valhalla-border hover:border-valhalla-gold transition duration-300 cursor-pointer shadow-md hover:shadow-gold" onclick="openLightbox(15)">
+          <div class="aspect-[5/7] relative bg-slate-900 overflow-hidden flex items-center justify-center">
+            <img src="assets/15.jpg" loading="lazy" alt="منيو فالهالا - صفحة 15" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 opacity-80 group-hover:opacity-100 transition"></div>
+            <span class="absolute top-2 right-2 px-2.5 py-0.5 rounded-md bg-black/75 backdrop-blur-md text-valhalla-gold font-bold text-xs border border-valhalla-gold/30">صفحة 15</span>
+            <div class="absolute bottom-2 inset-x-2 text-center opacity-0 group-hover:opacity-100 transition duration-300">
+              <span class="inline-flex items-center gap-1 px-3 py-1 rounded-lg gold-gradient-bg text-black font-bold text-xs shadow-gold"><i class="fa-solid fa-magnifying-glass-plus text-[10px]"></i> تكبير</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 16 -->
+        <div class="rounded-xl overflow-hidden glass-card group relative border border-valhalla-border hover:border-valhalla-gold transition duration-300 cursor-pointer shadow-md hover:shadow-gold" onclick="openLightbox(16)">
+          <div class="aspect-[5/7] relative bg-slate-900 overflow-hidden flex items-center justify-center">
+            <img src="assets/16.jpg" loading="lazy" alt="منيو فالهالا - صفحة 16" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 opacity-80 group-hover:opacity-100 transition"></div>
+            <span class="absolute top-2 right-2 px-2.5 py-0.5 rounded-md bg-black/75 backdrop-blur-md text-valhalla-gold font-bold text-xs border border-valhalla-gold/30">صفحة 16</span>
+            <div class="absolute bottom-2 inset-x-2 text-center opacity-0 group-hover:opacity-100 transition duration-300">
+              <span class="inline-flex items-center gap-1 px-3 py-1 rounded-lg gold-gradient-bg text-black font-bold text-xs shadow-gold"><i class="fa-solid fa-magnifying-glass-plus text-[10px]"></i> تكبير</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 17 -->
+        <div class="rounded-xl overflow-hidden glass-card group relative border border-valhalla-border hover:border-valhalla-gold transition duration-300 cursor-pointer shadow-md hover:shadow-gold" onclick="openLightbox(17)">
+          <div class="aspect-[5/7] relative bg-slate-900 overflow-hidden flex items-center justify-center">
+            <img src="assets/17.jpg" loading="lazy" alt="منيو فالهالا - صفحة 17" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 opacity-80 group-hover:opacity-100 transition"></div>
+            <span class="absolute top-2 right-2 px-2.5 py-0.5 rounded-md bg-black/75 backdrop-blur-md text-valhalla-gold font-bold text-xs border border-valhalla-gold/30">صفحة 17</span>
+            <div class="absolute bottom-2 inset-x-2 text-center opacity-0 group-hover:opacity-100 transition duration-300">
+              <span class="inline-flex items-center gap-1 px-3 py-1 rounded-lg gold-gradient-bg text-black font-bold text-xs shadow-gold"><i class="fa-solid fa-magnifying-glass-plus text-[10px]"></i> تكبير</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 18 -->
+        <div class="rounded-xl overflow-hidden glass-card group relative border border-valhalla-border hover:border-valhalla-gold transition duration-300 cursor-pointer shadow-md hover:shadow-gold" onclick="openLightbox(18)">
+          <div class="aspect-[5/7] relative bg-slate-900 overflow-hidden flex items-center justify-center">
+            <img src="assets/18.jpg" loading="lazy" alt="منيو فالهالا - صفحة 18" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 opacity-80 group-hover:opacity-100 transition"></div>
+            <span class="absolute top-2 right-2 px-2.5 py-0.5 rounded-md bg-black/75 backdrop-blur-md text-valhalla-gold font-bold text-xs border border-valhalla-gold/30">صفحة 18</span>
+            <div class="absolute bottom-2 inset-x-2 text-center opacity-0 group-hover:opacity-100 transition duration-300">
+              <span class="inline-flex items-center gap-1 px-3 py-1 rounded-lg gold-gradient-bg text-black font-bold text-xs shadow-gold"><i class="fa-solid fa-magnifying-glass-plus text-[10px]"></i> تكبير</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 19 -->
+        <div class="rounded-xl overflow-hidden glass-card group relative border border-valhalla-border hover:border-valhalla-gold transition duration-300 cursor-pointer shadow-md hover:shadow-gold" onclick="openLightbox(19)">
+          <div class="aspect-[5/7] relative bg-slate-900 overflow-hidden flex items-center justify-center">
+            <img src="assets/19.jpg" loading="lazy" alt="منيو فالهالا - صفحة 19" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 opacity-80 group-hover:opacity-100 transition"></div>
+            <span class="absolute top-2 right-2 px-2.5 py-0.5 rounded-md bg-black/75 backdrop-blur-md text-valhalla-gold font-bold text-xs border border-valhalla-gold/30">صفحة 19</span>
+            <div class="absolute bottom-2 inset-x-2 text-center opacity-0 group-hover:opacity-100 transition duration-300">
+              <span class="inline-flex items-center gap-1 px-3 py-1 rounded-lg gold-gradient-bg text-black font-bold text-xs shadow-gold"><i class="fa-solid fa-magnifying-glass-plus text-[10px]"></i> تكبير</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 20 -->
+        <div class="rounded-xl overflow-hidden glass-card group relative border border-valhalla-border hover:border-valhalla-gold transition duration-300 cursor-pointer shadow-md hover:shadow-gold" onclick="openLightbox(20)">
+          <div class="aspect-[5/7] relative bg-slate-900 overflow-hidden flex items-center justify-center">
+            <img src="assets/20.jpg" loading="lazy" alt="منيو فالهالا - صفحة 20" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 opacity-80 group-hover:opacity-100 transition"></div>
+            <span class="absolute top-2 right-2 px-2.5 py-0.5 rounded-md bg-black/75 backdrop-blur-md text-valhalla-gold font-bold text-xs border border-valhalla-gold/30">صفحة 20</span>
+            <div class="absolute bottom-2 inset-x-2 text-center opacity-0 group-hover:opacity-100 transition duration-300">
+              <span class="inline-flex items-center gap-1 px-3 py-1 rounded-lg gold-gradient-bg text-black font-bold text-xs shadow-gold"><i class="fa-solid fa-magnifying-glass-plus text-[10px]"></i> تكبير</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 21 -->
+        <div class="rounded-xl overflow-hidden glass-card group relative border border-valhalla-border hover:border-valhalla-gold transition duration-300 cursor-pointer shadow-md hover:shadow-gold" onclick="openLightbox(21)">
+          <div class="aspect-[5/7] relative bg-slate-900 overflow-hidden flex items-center justify-center">
+            <img src="assets/21.jpg" loading="lazy" alt="منيو فالهالا - صفحة 21" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 opacity-80 group-hover:opacity-100 transition"></div>
+            <span class="absolute top-2 right-2 px-2.5 py-0.5 rounded-md bg-black/75 backdrop-blur-md text-valhalla-gold font-bold text-xs border border-valhalla-gold/30">صفحة 21</span>
+            <div class="absolute bottom-2 inset-x-2 text-center opacity-0 group-hover:opacity-100 transition duration-300">
+              <span class="inline-flex items-center gap-1 px-3 py-1 rounded-lg gold-gradient-bg text-black font-bold text-xs shadow-gold"><i class="fa-solid fa-magnifying-glass-plus text-[10px]"></i> تكبير</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 22 -->
+        <div class="rounded-xl overflow-hidden glass-card group relative border border-valhalla-border hover:border-valhalla-gold transition duration-300 cursor-pointer shadow-md hover:shadow-gold" onclick="openLightbox(22)">
+          <div class="aspect-[5/7] relative bg-slate-900 overflow-hidden flex items-center justify-center">
+            <img src="assets/22.jpg" loading="lazy" alt="منيو فالهالا - صفحة 22" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 opacity-80 group-hover:opacity-100 transition"></div>
+            <span class="absolute top-2 right-2 px-2.5 py-0.5 rounded-md bg-black/75 backdrop-blur-md text-valhalla-gold font-bold text-xs border border-valhalla-gold/30">صفحة 22</span>
+            <div class="absolute bottom-2 inset-x-2 text-center opacity-0 group-hover:opacity-100 transition duration-300">
+              <span class="inline-flex items-center gap-1 px-3 py-1 rounded-lg gold-gradient-bg text-black font-bold text-xs shadow-gold"><i class="fa-solid fa-magnifying-glass-plus text-[10px]"></i> تكبير</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 23 -->
+        <div class="rounded-xl overflow-hidden glass-card group relative border border-valhalla-border hover:border-valhalla-gold transition duration-300 cursor-pointer shadow-md hover:shadow-gold" onclick="openLightbox(23)">
+          <div class="aspect-[5/7] relative bg-slate-900 overflow-hidden flex items-center justify-center">
+            <img src="assets/23.jpg" loading="lazy" alt="منيو فالهالا - صفحة 23" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 opacity-80 group-hover:opacity-100 transition"></div>
+            <span class="absolute top-2 right-2 px-2.5 py-0.5 rounded-md bg-black/75 backdrop-blur-md text-valhalla-gold font-bold text-xs border border-valhalla-gold/30">صفحة 23</span>
+            <div class="absolute bottom-2 inset-x-2 text-center opacity-0 group-hover:opacity-100 transition duration-300">
+              <span class="inline-flex items-center gap-1 px-3 py-1 rounded-lg gold-gradient-bg text-black font-bold text-xs shadow-gold"><i class="fa-solid fa-magnifying-glass-plus text-[10px]"></i> تكبير</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-8 text-center flex flex-wrap items-center justify-center gap-4">
+        <span class="text-gray-400 text-xs sm:text-sm bg-valhalla-card/60 px-5 py-2.5 rounded-full border border-valhalla-border">
+          ✨ تم إدراج كامل صفحات المنيو (23 صفحة) بدقة عالية — انقر على أي صفحة لتكبيرها واستعراضها بالحجم الكامل.
+        </span>
+      </div>
+
+      <!-- Apps Delivery Mention (Clean badges without fake web links) -->
+      <div class="mt-16 rounded-2xl bg-gradient-to-r from-valhalla-card via-valhalla-surface to-valhalla-card border border-valhalla-gold/30 p-8 text-center sm:text-right flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 text-valhalla-gold text-xs font-bold uppercase mb-2">
+            <i class="fa-solid fa-mobile-screen"></i> خدمة التوصيل المنزلي السريع
+          </div>
+          <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">متاح للطلب المباشر عبر تطبيقات الهواتف الذكية</h3>
+          <p class="text-gray-300 text-sm max-w-xl">
+            يمكنكم طلب أطباق مطعم فالهالا المفضلة لديكم في بغداد مباشرة عبر البحث عن <strong class="text-valhalla-gold">"Valhalla"</strong> داخل تطبيقي التوصيل المعتمدين:
+          </p>
+        </div>
+
+        <!-- App Badges Presentation -->
+        <div class="flex flex-wrap items-center justify-center gap-3">
+          <div class="px-5 py-3 rounded-xl bg-emerald-950/80 border border-emerald-500/50 text-emerald-300 font-bold text-sm flex items-center gap-2.5 shadow-md">
+            <span class="w-8 h-8 rounded-lg bg-emerald-500 text-black flex items-center justify-center font-black text-xs">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </span>
+            <div class="text-right">
+              <span class="block text-white font-bold leading-tight">تطبيق توترز</span>
+              <span class="text-[10px] text-emerald-400">Toters App</span>
+            </div>
+          </div>
+
+          <div class="px-5 py-3 rounded-xl bg-orange-950/80 border border-orange-500/50 text-orange-300 font-bold text-sm flex items-center gap-2.5 shadow-md">
+            <span class="w-8 h-8 rounded-lg bg-orange-500 text-white flex items-center justify-center font-black text-xs">
+              <i class="fa-solid fa-utensils"></i>
+            </span>
+            <div class="text-right">
+              <span class="block text-white font-bold leading-tight">تطبيق طلبات</span>
+              <span class="text-[10px] text-orange-400">Talabat App</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FEATURES SECTION ================= -->
+  <section id="features" class="py-20 bg-valhalla-surface border-y border-valhalla-border/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-valhalla-gold text-sm font-bold uppercase tracking-wider">لماذا يختارنا الزوار؟</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2 mb-4">معايير الضيافة في <span class="gold-gradient-text">فالهالا</span></h2>
+        <p class="text-gray-400 text-sm sm:text-base">نحرص على أدق التفاصيل لنضمن لكم وقتاً ممتعاً وتجربة استثنائية مع كل زيارة.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-valhalla-card border border-valhalla-border hover:border-valhalla-gold/50 transition group">
+          <div class="w-14 h-14 rounded-xl gold-gradient-bg flex items-center justify-center text-black text-2xl font-black mb-5 shadow-gold group-hover:scale-110 transition duration-300">
+            <i class="fa-solid fa-clock"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">مفتوح 24/7 دون توقف</h3>
+          <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+            استمتع بأشهى المأكولات في أي وقت؛ سواء كان إفطاراً باكراً، أو عشاءً متأخراً بعد منتصف الليل.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-valhalla-card border border-valhalla-border hover:border-valhalla-gold/50 transition group">
+          <div class="w-14 h-14 rounded-xl gold-gradient-bg flex items-center justify-center text-black text-2xl font-black mb-5 shadow-gold group-hover:scale-110 transition duration-300">
+            <i class="fa-solid fa-couch"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">صالات عائلية و VIP</h3>
+          <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+            جلسات خاصة توفر أقصى درجات الراحة والخصوصية للعائلات واجتماعات العمل والمناسبات الخاصة.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-valhalla-card border border-valhalla-border hover:border-valhalla-gold/50 transition group">
+          <div class="w-14 h-14 rounded-xl gold-gradient-bg flex items-center justify-center text-black text-2xl font-black mb-5 shadow-gold group-hover:scale-110 transition duration-300">
+            <i class="fa-solid fa-medal"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">أعلى معايير الجودة</h3>
+          <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+            نعتمد فقط اللحوم والمكونات الطازجة يومياً تحت إشراف طهاة ذوي خبرة واسعة في الفنادق والمطاعم الفاخرة.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-valhalla-card border border-valhalla-border hover:border-valhalla-gold/50 transition group">
+          <div class="w-14 h-14 rounded-xl gold-gradient-bg flex items-center justify-center text-black text-2xl font-black mb-5 shadow-gold group-hover:scale-110 transition duration-300">
+            <i class="fa-solid fa-square-parking"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">موقع استراتيجي ومواقف</h3>
+          <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+            موقع يسهل الوصول إليه في قلب المنصور مع توفر خدمة صف السيارات ومواقف مريحة لزوارنا الكرام.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= GOOGLE REVIEWS SECTION ================= -->
+  <section id="reviews" class="py-20 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <span class="text-valhalla-gold text-sm font-bold uppercase tracking-wider">تقييمات موثوقة</span>
+          <h2 class="text-3xl sm:text-4xl font-black text-white mt-1">ماذا يقول زوار <span class="gold-gradient-text">فالهالا</span> على خرائط قوقل؟</h2>
+        </div>
+        <a href="https://maps.app.goo.gl/iEUcxWEHV9ViHvrx8" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-valhalla-card border border-valhalla-gold/40 text-valhalla-gold hover:bg-valhalla-gold/10 font-bold text-sm transition">
+          <i class="fa-brands fa-google text-base"></i>
+          <span>تقييمات خرائط Google Maps</span>
+          <i class="fa-solid fa-arrow-left text-xs"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="glass-card rounded-2xl p-6 relative flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-full bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-valhalla-gold font-bold">
+                  ع
+                </div>
+                <div>
+                  <h4 class="text-white font-bold text-sm">علي الجبوري</h4>
+                  <span class="text-gray-400 text-xs">مرشد محلي • زائر موثق</span>
+                </div>
+              </div>
+              <i class="fa-brands fa-google text-gray-500 text-lg"></i>
+            </div>
+            <div class="flex text-amber-400 text-xs mb-3">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              "من أجمل وأرقى مطاعم بغداد حالياً بدون مبالغة. الستيك عندهم مستواه عالمي والاستواء مضبوط 100%. والشي المميز جداً إنه فاتح 24 ساعة، الخدمة سريعة والستاف محترم للغاية."
+            </p>
+          </div>
+          <span class="text-gray-500 text-xs mt-4 block">قبل أسبوعين</span>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 relative flex flex-col justify-between border-valhalla-gold/40">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-full bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 font-bold">
+                  س
+                </div>
+                <div>
+                  <h4 class="text-white font-bold text-sm">سارة المهندس</h4>
+                  <span class="text-gray-400 text-xs">جلسة عائلية</span>
+                </div>
+              </div>
+              <i class="fa-brands fa-google text-gray-500 text-lg"></i>
+            </div>
+            <div class="flex text-amber-400 text-xs mb-3">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              "الديكور والإضاءة فخمة جداً وتحسسك براحة تامة. جربنا القوزي والمشاوي وكان الطعم خرافي ولحم طازج وترف. كيكة المولتن كيك لا تفوتكم مع القهوة. أنصح بزيارته بشدة."
+            </p>
+          </div>
+          <span class="text-gray-500 text-xs mt-4 block">قبل شهر</span>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 relative flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-full bg-blue-500/20 border border-blue-500/40 flex items-center justify-center text-blue-400 font-bold">
+                  م
+                </div>
+                <div>
+                  <h4 class="text-white font-bold text-sm">محمد الخزرجي</h4>
+                  <span class="text-gray-400 text-xs">فطور صباحي</span>
+                </div>
+              </div>
+              <i class="fa-brands fa-google text-gray-500 text-lg"></i>
+            </div>
+            <div class="flex text-amber-400 text-xs mb-3">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              "أفضل تجربة ريوق (فطور) بالمنصور. القيمر والكاهي مع الشاي العراقي المهيل عالم ثاني. المكان رايق والموسيقى هادئة. بالتوفيق لإدارة فالهالا على هذا المستوى الرائع."
+            </p>
+          </div>
+          <span class="text-gray-500 text-xs mt-4 block">قبل 3 أسابيع</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CONTACT & LOCATION SECTION (Clean presentation without booking form) ================= -->
+  <section id="contact" class="py-20 bg-valhalla-surface border-t border-valhalla-border/40 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-valhalla-gold text-sm font-bold uppercase tracking-wider">نرحب بكم دائماً</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2 mb-4">الموقع ومعلومات زيارة <span class="gold-gradient-text">فالهالا</span></h2>
+        <p class="text-gray-400 text-sm sm:text-base">تفضل بزيارتنا في بغداد - المنصور، أو اتصل بنا مباشرة للاستفسارات والمعلومات.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        
+        <!-- Left: Contact Details Cards (5 Cols) -->
+        <div class="lg:col-span-5 flex flex-col justify-between space-y-4">
+          
+          <div class="p-6 rounded-2xl bg-valhalla-card border border-valhalla-border">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl gold-gradient-bg flex items-center justify-center text-black text-xl shrink-0">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="space-y-1">
+                <h4 class="text-white font-bold text-base">عنوان المطعم</h4>
+                <p class="text-gray-300 text-sm leading-relaxed">
+                  العراق، محافظة بغداد، منطقة المنصور - شارع 14 رمضان (قرب الداودي / بداية شارع التانكي).
+                </p>
+                <div class="pt-2">
+                  <a href="https://maps.app.goo.gl/iEUcxWEHV9ViHvrx8" target="_blank" rel="noopener noreferrer" 
+                     class="inline-flex items-center gap-1.5 text-valhalla-gold hover:underline text-xs font-bold">
+                    <span>فتح الموقع الدقيق في Google Maps</span>
+                    <i class="fa-solid fa-external-link text-[10px]"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-valhalla-card border border-valhalla-border">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl gold-gradient-bg flex items-center justify-center text-black text-xl shrink-0">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <div class="space-y-1">
+                <h4 class="text-white font-bold text-base">ساعات العمل</h4>
+                <p class="text-emerald-400 font-bold text-sm">مفتوح على مدار 24 ساعة يومياً</p>
+                <p class="text-gray-400 text-xs">نستقبلكم طوال أيام الأسبوع بلا انقطاع (وجبات إفطار، غداء، عشاء، وجلسات كافيه ليلية).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-valhalla-card border border-valhalla-border">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl gold-gradient-bg flex items-center justify-center text-black text-xl shrink-0">
+                <i class="fa-solid fa-phone-volume"></i>
+              </div>
+              <div class="space-y-2 w-full">
+                <h4 class="text-white font-bold text-base">أرقام التواصل والاستفسار</h4>
+                <div class="flex flex-col sm:flex-row gap-2 pt-1">
+                  <a href="tel:07744007788" class="flex-1 px-4 py-2.5 rounded-lg bg-valhalla-surface border border-valhalla-border hover:border-valhalla-gold text-white text-center font-bold text-sm transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone text-xs text-valhalla-gold"></i>
+                    <span>07744007788</span>
+                  </a>
+                  <a href="tel:07853603336" class="flex-1 px-4 py-2.5 rounded-lg bg-valhalla-surface border border-valhalla-border hover:border-valhalla-gold text-white text-center font-bold text-sm transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone text-xs text-valhalla-gold"></i>
+                    <span>07853603336</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3 pt-2">
+            <a href="https://wa.me/9647744007788" target="_blank" rel="noopener noreferrer" 
+               class="p-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-center text-sm transition shadow-lg flex items-center justify-center gap-2">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>واتساب فوري</span>
+            </a>
+            <a href="https://maps.app.goo.gl/iEUcxWEHV9ViHvrx8" target="_blank" rel="noopener noreferrer" 
+               class="p-4 rounded-xl bg-valhalla-card hover:bg-valhalla-border text-valhalla-gold border border-valhalla-gold/50 font-bold text-center text-sm transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-diamond-turn-right text-lg"></i>
+              <span>الاتجاهات للمطعم</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right: Expanded Google Map Card (7 Cols) -->
+        <div class="lg:col-span-7 flex flex-col">
+          <div class="rounded-2xl overflow-hidden border border-valhalla-border bg-valhalla-card relative flex-1 flex flex-col">
+            <div class="p-4 bg-valhalla-surface border-b border-valhalla-border flex items-center justify-between">
+              <span class="text-sm font-bold text-gray-200 flex items-center gap-2">
+                <i class="fa-solid fa-map-location-dot text-valhalla-gold"></i>
+                موقع مطعم وكافيه فالهالا على الخريطة
+              </span>
+              <a href="https://maps.app.goo.gl/iEUcxWEHV9ViHvrx8" target="_blank" rel="noopener noreferrer" 
+                 class="text-xs text-valhalla-gold hover:underline flex items-center gap-1 font-semibold">
+                <span>توجيه في تطبيق الخرائط</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+            
+            <div class="relative flex-1 min-h-[380px] w-full bg-slate-900">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3333.376826649567!2d44.33734787635293!3d33.30568627344845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15577f71bff2a9eb%3A0xfab2882b8df27c43!2sValhalla%20Restaurant!5e0!3m2!1sen!2siq!4v1709600000000!5m2!1sen!2siq" 
+                class="w-full h-full border-0 filter grayscale contrast-125 hover:filter-none transition duration-500" 
+                allowfullscreen="" 
+                loading="lazy" 
+                title="موقع مطعم وكافيه فالهالا في بغداد">
+              </iframe>
+              
+              <div class="absolute bottom-4 right-4 bg-valhalla-dark/95 backdrop-blur-md px-4 py-3 rounded-xl border border-valhalla-gold/40 text-xs text-white shadow-xl pointer-events-none">
+                <p class="font-bold text-sm text-valhalla-gold">📍 Valhalla Restaurant & Café</p>
+                <p class="text-gray-300 mt-0.5">بغداد - المنصور (شارع 14 رمضان)</p>
+                <p class="text-emerald-400 text-[10px] mt-1">● مفتوح 24 ساعة</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-valhalla-dark border-t border-valhalla-border/80 pt-16 pb-8 text-gray-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-valhalla-border/50">
+        
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-xl overflow-hidden border border-valhalla-gold/40 shadow-gold bg-valhalla-card flex items-center justify-center shrink-0 p-0.5">
+              <img src="assets/logo.jpg" alt="لوقو مطعم وكافيه فالهالا" class="w-full h-full object-cover rounded-lg" />
+            </div>
+            <div>
+              <span class="block font-cinzel text-lg font-black text-white leading-none">VALHALLA</span>
+              <span class="block text-xs text-gray-400">مطعم وكافيه <span class="gold-gradient-text font-bold">فالهالا</span></span>
+            </div>
+          </div>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            المكان الأرقى في بغداد لعيش تجربة طعام أسطورية لا تُنسى، تجمع بين أصالة النكهة الشرقية وعالمية الستيك والبرجر الراقي على مدار 24 ساعة.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://maps.app.goo.gl/iEUcxWEHV9ViHvrx8" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-valhalla-card hover:bg-valhalla-gold hover:text-black border border-valhalla-border flex items-center justify-center text-gray-300 transition" title="خرائط قوقل">
+              <i class="fa-brands fa-google text-sm"></i>
+            </a>
+            <a href="https://www.instagram.com/valhalla.iq/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-valhalla-card hover:bg-gradient-to-tr hover:from-amber-400 hover:via-pink-500 hover:to-purple-600 hover:text-white border border-valhalla-border flex items-center justify-center text-gray-300 transition" title="إنستغرام">
+              <i class="fa-brands fa-instagram text-sm"></i>
+            </a>
+            <a href="https://wa.me/9647744007788" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-valhalla-card hover:bg-emerald-600 hover:text-white border border-valhalla-border flex items-center justify-center text-gray-300 transition" title="واتساب">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="text-white font-bold text-sm tracking-wider">أقسام الموقع</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#hero" class="hover:text-valhalla-gold transition">الرئيسية</a></li>
+            <li><a href="#about" class="hover:text-valhalla-gold transition">عن فالهالا</a></li>
+            <li><a href="#menu" class="hover:text-valhalla-gold transition">قائمة الطعام (المنيو)</a></li>
+            <li><a href="#features" class="hover:text-valhalla-gold transition">المميزات</a></li>
+            <li><a href="#reviews" class="hover:text-valhalla-gold transition">آراء الزوار</a></li>
+            <li><a href="#contact" class="hover:text-valhalla-gold transition">الموقع والاتصال</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="text-white font-bold text-sm tracking-wider">أوقات العمل</h4>
+          <p class="text-xs text-emerald-400 font-semibold">مفتوح 24 ساعة / 7 أيام في الأسبوع</p>
+          <ul class="space-y-1.5 text-xs text-gray-400">
+            <li>• إفطار صباحي ملكي: من الصباح الباكر</li>
+            <li>• غداء وأطباق لحوم وقوزي: يومياً</li>
+            <li>• عشاء ومشاوي وستيك: مستمر طوال الليل</li>
+            <li>• قهوة مختصة وحلويات: 24/7</li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="text-white font-bold text-sm tracking-wider">اتصل بنا الآن</h4>
+          <p class="text-xs text-gray-400">بغداد - المنصور (شارع 14 رمضان)</p>
+          <div class="space-y-1 text-xs">
+            <a href="tel:07744007788" class="block text-gray-200 hover:text-valhalla-gold font-bold">
+              📞 07744007788
+            </a>
+            <a href="tel:07853603336" class="block text-gray-200 hover:text-valhalla-gold font-bold">
+              📞 07853603336
+            </a>
+          </div>
+          <div class="pt-2">
+            <a href="https://www.instagram.com/valhalla.iq/" target="_blank" rel="noopener noreferrer" class="text-xs text-pink-400 hover:underline flex items-center gap-1">
+              <i class="fa-brands fa-instagram"></i>
+              <span>@valhalla.iq</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500 text-center">
+        <p>© 2026 مطعم وكافيه فالهالا (Valhalla Restaurant). جميع الحقوق محفوظة.</p>
+        <p class="text-gray-400">صفحة هبوط للعرض والتقديم بأعلى معايير الـ UI/UX ⚡</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING WHATSAPP BUTTON ================= -->
+  <a href="https://wa.me/9647744007788" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     title="تواصل معنا عبر واتساب"
+     class="fixed bottom-6 left-6 z-40 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center text-2xl shadow-xl hover:scale-110 transition duration-300">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- ================= MENU LIGHTBOX MODAL (23 PAGES VIEWER) ================= -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-md flex flex-col justify-between p-4 sm:p-6 transition-all duration-300 select-none" onclick="handleLightboxBackdropClick(event)">
+    <!-- Lightbox Top Controls -->
+    <div class="flex items-center justify-between z-20">
+      <div class="flex items-center gap-3">
+        <span class="px-3.5 py-1.5 rounded-full gold-gradient-bg text-black font-extrabold text-xs shadow-gold" id="lightboxCounter">
+          الصفحة 1 من 23
+        </span>
+        <span class="text-gray-400 text-xs hidden sm:inline">
+          <i class="fa-solid fa-keyboard ml-1"></i> استخدم الأسهم للتنقل أو اضغط Esc للخروج
+        </span>
+      </div>
+      <div class="flex items-center gap-2">
+        <a id="lightboxDownloadBtn" href="assets/1.jpg" target="_blank" class="w-10 h-10 rounded-xl bg-valhalla-card hover:bg-valhalla-border text-gray-300 hover:text-white border border-valhalla-border flex items-center justify-center transition" title="عرض الصورة بالحجم الكامل">
+          <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+        </a>
+        <button onclick="closeLightbox()" class="w-10 h-10 rounded-xl bg-valhalla-card hover:bg-red-600/80 text-gray-300 hover:text-white border border-valhalla-border flex items-center justify-center transition" title="إغلاق">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Image Display & Navigation Arrows -->
+    <div class="relative flex-1 flex items-center justify-center my-3 overflow-hidden">
+      <!-- Prev Button (Right side in RTL) -->
+      <button onclick="prevLightboxPage()" class="absolute right-2 sm:right-6 z-30 w-12 h-12 rounded-full bg-black/70 hover:bg-valhalla-gold hover:text-black text-white border border-white/20 flex items-center justify-center transition shadow-2xl text-lg backdrop-blur-md" title="الصفحة السابقة">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <!-- Active Menu Image -->
+      <img id="lightboxImage" src="assets/1.jpg" alt="قائمة طعام فالهالا" class="max-h-[82vh] max-w-[92vw] object-contain rounded-xl shadow-2xl border border-valhalla-gold/30 transition-all duration-200 transform" />
+
+      <!-- Next Button (Left side in RTL) -->
+      <button onclick="nextLightboxPage()" class="absolute left-2 sm:left-6 z-30 w-12 h-12 rounded-full bg-black/70 hover:bg-valhalla-gold hover:text-black text-white border border-white/20 flex items-center justify-center transition shadow-2xl text-lg backdrop-blur-md" title="الصفحة التالية">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+    </div>
+
+    <!-- Quick Jump Number Bar -->
+    <div class="flex items-center justify-center gap-1.5 z-20 overflow-x-auto py-2 max-w-full px-4 scrollbar-thin">
+      <span class="text-gray-400 text-xs shrink-0 ml-2">الانتقال السريع:</span>
+      <div class="flex items-center gap-1 overflow-x-auto" id="lightboxQuickNav"></div>
+    </div>
+  </div>
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const icon = document.getElementById('mobileMenuIcon');
+      menu.classList.toggle('hidden');
+      if (menu.classList.contains('hidden')) {
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      } else {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+      }
+    }
+
+    // ================= LIGHTBOX GALLERY LOGIC =================
+    let currentLightboxIndex = 1;
+    const totalMenuPages = 23;
+
+    function initQuickNav() {
+      const container = document.getElementById('lightboxQuickNav');
+      if (!container) return;
+      container.innerHTML = '';
+      for (let i = 1; i <= totalMenuPages; i++) {
+        const btn = document.createElement('button');
+        btn.id = `qnav-${i}`;
+        btn.textContent = i;
+        btn.className = `w-7 h-7 rounded-lg text-xs font-bold transition shrink-0 ${
+          i === currentLightboxIndex
+            ? 'gold-gradient-bg text-black shadow-gold'
+            : 'bg-valhalla-card text-gray-400 hover:text-white border border-valhalla-border'
+        }`;
+        btn.onclick = () => {
+          currentLightboxIndex = i;
+          updateLightbox();
+        };
+        container.appendChild(btn);
+      }
+    }
+
+    function openLightbox(pageNumber) {
+      currentLightboxIndex = pageNumber;
+      initQuickNav();
+      updateLightbox();
+      const modal = document.getElementById('lightboxModal');
+      modal.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightboxModal');
+      modal.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    function updateLightbox() {
+      const img = document.getElementById('lightboxImage');
+      const counter = document.getElementById('lightboxCounter');
+      const dlBtn = document.getElementById('lightboxDownloadBtn');
+      const src = `assets/${currentLightboxIndex}.jpg`;
+
+      img.src = src;
+      img.alt = `منيو فالهالا - صفحة ${currentLightboxIndex}`;
+      counter.textContent = `الصفحة ${currentLightboxIndex} من ${totalMenuPages}`;
+      if (dlBtn) dlBtn.href = src;
+
+      // Update quick nav buttons
+      for (let i = 1; i <= totalMenuPages; i++) {
+        const btn = document.getElementById(`qnav-${i}`);
+        if (btn) {
+          if (i === currentLightboxIndex) {
+            btn.className = 'w-7 h-7 rounded-lg text-xs font-bold transition shrink-0 gold-gradient-bg text-black shadow-gold';
+            btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+          } else {
+            btn.className = 'w-7 h-7 rounded-lg text-xs font-bold transition shrink-0 bg-valhalla-card text-gray-400 hover:text-white border border-valhalla-border';
+          }
+        }
+      }
+    }
+
+    function nextLightboxPage() {
+      if (currentLightboxIndex < totalMenuPages) {
+        currentLightboxIndex++;
+      } else {
+        currentLightboxIndex = 1;
+      }
+      updateLightbox();
+    }
+
+    function prevLightboxPage() {
+      if (currentLightboxIndex > 1) {
+        currentLightboxIndex--;
+      } else {
+        currentLightboxIndex = totalMenuPages;
+      }
+      updateLightbox();
+    }
+
+    function handleLightboxBackdropClick(e) {
+      if (e.target.id === 'lightboxModal') {
+        closeLightbox();
+      }
+    }
+
+    // Keyboard Shortcuts
+    document.addEventListener('keydown', function (e) {
+      const modal = document.getElementById('lightboxModal');
+      if (!modal || modal.classList.contains('hidden')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') nextLightboxPage();
+      if (e.key === 'ArrowRight') prevLightboxPage();
+    });
+  </script>
+</body>
+</html>
